@@ -1,0 +1,15 @@
+onLayoutChanged is not supported until Qt 6.5.
+
+--- share/qtcreator/qmldesigner/connectionseditor/SuggestionPopup.qml.orig	2023-11-22 09:33:09.000000000 +0100
++++ share/qtcreator/qmldesigner/connectionseditor/SuggestionPopup.qml	2023-12-18 23:24:14.000000000 +0100
+@@ -207,10 +207,6 @@
+                               && treeScrollBar.isNeeded
+                     }
+ 
+-                    onLayoutChanged: function() {
+-                        treeView.expand(0)
+-                    }
+-
+                     rowHeightProvider: function(row) {
+                         return (row <= 0) ? 0 : -1
+                     }

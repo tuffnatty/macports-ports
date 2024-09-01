@@ -1,0 +1,19 @@
+--- cmake/QtCreatorAPI.cmake.orig	2023-06-14 03:55:41.000000000 +0200
++++ cmake/QtCreatorAPI.cmake	2023-07-13 21:10:04.000000000 +0200
+@@ -783,14 +783,14 @@
+         set(_code "${_code}
+           execute_process(COMMAND \"${CMAKE_INSTALL_NAME_TOOL}\"
+             -delete_rpath \"${_rpath}\"
+-            \"\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${_EXECUTABLE_FILE_PATH}\" ${QTC_COMMAND_ERROR_IS_FATAL})"
++            \"\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${_EXECUTABLE_FILE_PATH}\")"
+         )
+       endforeach()
+       foreach(_rpath ${install_rpath})
+         set(_code "${_code}
+           execute_process(COMMAND \"${CMAKE_INSTALL_NAME_TOOL}\"
+             -add_rpath \"${_rpath}\"
+-            \"\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${_EXECUTABLE_FILE_PATH}\" ${QTC_COMMAND_ERROR_IS_FATAL})"
++            \"\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${_EXECUTABLE_FILE_PATH}\")"
+         )
+       endforeach()
+       install(CODE "${_code}")
